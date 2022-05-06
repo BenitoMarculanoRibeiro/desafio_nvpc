@@ -1,0 +1,82 @@
+html {
+    background-color: #0D1117
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    max-width: 90%;
+    padding: 10px;
+    margin: auto;
+    column-gap: 5%;
+    row-gap: 2%;
+}
+
+.grid1 div {
+    border-style: solid solid solid solid;
+    border-width: 1px;
+    border-color: #000;
+    text-align: center;
+}
+
+.grid1 div h2 {
+    font-size: 20px;
+    color: #58A6FF;
+}
+
+.grid1 div p {
+    font-size: 14px;
+    color: #8B949E;
+}
+
+.grid1 div a {
+    font-size: 14px;
+    color: #8B949E;
+    text-decoration: none;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    max-width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+    grid-gap: 3%;
+    align-items: center;
+}
+
+.grid2 div {
+    border-style: solid solid solid solid;
+    border-width: 1px;
+    border-color: #000;
+    width: 110%;
+    height: 110%;
+    text-align: center;
+}
+
+.grid2 div h2 {
+    font-size: 2em;
+    color: #58A6FF;
+}
+
+.grid2 div p {
+    font-size: 1.5em;
+    color: #8B949E;
+}
+
+.grid2 div a {
+    font-size: 1.5em;
+    color: #8B949E;
+    text-decoration: none;
+}
+
+.item-center {
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 30% 30%;
+    column-gap: 10px;
+    row-gap: 15px;
+}

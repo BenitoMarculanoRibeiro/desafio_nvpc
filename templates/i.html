@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Desafio NVPC</title>
+</head>
+
+<body>
+    <div>
+        <form method="get" id="multiple_select_form" action="" multiple="true" class="grid2">
+            <input type="search" id="your-repos-filter" name="name_repositori" class="form-control width-full" placeholder="Find a repository…" autocomplete="off" aria-label="Find a repository…" value="" data-throttled-autosubmit="">
+
+            <select name="type" id="type" class="type" onchange="this.form.submit()">
+                <option selected hidden value=None>Type</option>
+                <option value=None>All</option>
+                <option value="fork">Fork</option>
+                <option value="archived">Archived</option>
+            </select>
+            <select name="language" id="language" class="language" onchange="this.form.submit()">
+                <option selected hidden value=None>Language</option>
+                <option value=None>All</option>
+                <option value="python">Python</option>
+                <option value="ejs">EJS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="typescript">TypeScript</option>
+                <option value="hack">Hack</option>
+                <option value="php">PHP</option>
+                <option value="html">HTML</option>
+                <option value="c">C#</option>
+            </select>
+            <select name="sort" id="sort" class="sort" onchange="this.form.submit()">
+                <option selected hidden value="name">Sort</option>
+                <option value="name">Name</option>
+                <option value="last_update">Last update</option>
+            </select>
+        </form>
+    </div>
+    <div class="grid1">
+        {% for post in posts %}
+        <div>
+            <h2>{{ post['name'] }}</h2>
+
+            {% if post['language'] != None %}
+            <p>{{ post['language'] }}</p>
+            {% else %} {% endif %}
+            <p>Criado em {{ post['created_at'] }}</p> {% if post['description'] != None %}
+            <p>{{ post['description'] }}</p>
+
+            {% else %} {% endif %}
+            <p>Atualizado em {{ post['updated_at'] }}</p>
+            <a href={{ post[ "url" ] }}>Acesse aqui.</a>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("your-repos-filter").value = urlParams.get('name_repositori');
+        document.evaluate("//option[@value='" + urlParams.get('type') + "']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.setAttribute("selected", "selected");
+        document.evaluate("//option[@value='" + urlParams.get('language') + "']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.setAttribute("selected", "selected");
+        document.evaluate("//option[@value='" + urlParams.get('sort') + "']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.setAttribute("selected", "selected");
+    </script>
+</body>
+
+</html>
