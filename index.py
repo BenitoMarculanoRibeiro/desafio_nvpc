@@ -133,7 +133,7 @@ def index():
     sort = request.args.get('sort')
     posts = sort_by(find_text_repositori(
         get_type(get_language(data, language), type), name_repositori), sort)
-    return render_template('i.html', posts=posts)
+    return render_template('index.html', posts=posts)
 
 
 app.run(host="0.0.0.0")
