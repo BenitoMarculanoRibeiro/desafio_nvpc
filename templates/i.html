@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <link rel="icon" type="imagem/png" href="https://media-exp1.licdn.com/dms/image/C4D0BAQEMNSk2knUhcA/company-logo_100_100/0/1639421938654?e=1660176000&amp;v=beta&amp;t=ADKprb_jXl4EGTh7J90G3boBRo7Nxy1OjkJgWqCWZDw" />
     <title>Desafio NVPC</title>
 </head>
 
 <body>
     <div>
         <form method="get" id="multiple_select_form" action="" multiple="true" class="grid2">
-            <input type="search" id="your-repos-filter" name="name_repositori" class="form-control width-full" placeholder="Find a repository…" autocomplete="off" aria-label="Find a repository…" value="" data-throttled-autosubmit="">
+            <input type="search" id="your-repos-filter" name="name_repositori" class="form-control width-full" placeholder="Find a repository…" autocomplete="on" aria-label="Find a repository…" value="" data-throttled-autosubmit="">
 
             <select name="type" id="type" class="type" onchange="this.form.submit()">
                 <option selected hidden value=None>Type</option>

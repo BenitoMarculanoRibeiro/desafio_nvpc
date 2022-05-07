@@ -1,6 +1,6 @@
 # desafio_nvpc
 
-### DESAFIO NVPC
+## Desafio nvpc
 
 Oi! Analisei a sua candidatura para a nossa vaga na NVPC.COMPANY .
 Eu quero te desafiar a demonstrar algumas habilidades, desenvolvendo um app simples, que exiba a lista de seus próprios repositórios GITHUB usando a API Graphql pública do GITHUB, ou a API Rest pública do GITHUB.
@@ -19,9 +19,13 @@ Você aceita o desafio?
 Helena Camargo
 Buscamos pessoas incríveis para criar uma das melhores empresas para o mundo.
 
-# Iniciando projeto
+## Requisitos
 
-Para esse projeto está sendo usado Python versão 3.8.10 no Windows.
+Para esse projeto está sendo usado Python versão 3.8.10 no Windows. 
+
+E para a hospedagem usei a plataforma replit (https://replit.com) por ser mais familiarizado com o funcionamento dela.
+
+## Iniciando projeto localmente
 
 ```
 python -m pip install virtualenv
@@ -36,5 +40,9 @@ python -m virtualenv env
 ```
 
 ```
-pip install requests
+pip install -r requirements.txt
+```
+
+```
+python -m index.py
 ```
