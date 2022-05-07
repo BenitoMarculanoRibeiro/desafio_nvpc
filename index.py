@@ -11,18 +11,24 @@ class ListaDeRepositorios():
 
     def request_api(self):
         # Fazendo requisição usando a API Rest pública do GITHUB.
-        resposta = requests.get(
+        self.resposta = requests.get(
             f'https://api.github.com/users/{self._usuario}/repos?per_page=1000')
-        if resposta.status_code == 200:
-            return resposta.json()
+        if self.resposta.status_code == 200:
+            return self.resposta.json()
         else:
-            return resposta.status_code
+            return False
 
     def get_repo(self):
         # Selecionando informações a serem trabalhadas e organizando em JSON.
-        # dados_api = self.request_api()
-        with open("data.json", encoding='utf-8') as meu_json:
-            dados_api = json.load(meu_json)
+
+        dados_api = self.request_api()
+        if dados_api == False:
+            print(f'API falhou ou chegou ao limite. Usando arquivo JSON agora. {self.resposta.status_code}')
+            with open("data.json", encoding='utf-8') as meu_json:
+                dados_api = json.load(meu_json)
+        else:
+            save(dados_api)
+
         dados = []
         if type(dados_api) is not int:
             for i in range(len(dados_api)):
@@ -45,11 +51,6 @@ class ListaDeRepositorios():
         else:
             print(dados_api)
 
-    def save(self, name='data.json'):
-        # Salvando dados em JSON apenas para visualisar a resposta do resquest de forma organizada.
-        with open(name, 'w', encoding='utf-8') as f:
-            json.dump(self.request_api(), f, ensure_ascii=False, indent=4)
-
     def print_repo(self):
         dados_api = self.request_api()
         if type(dados_api) is not int:
@@ -63,6 +64,12 @@ class ListaDeRepositorios():
                     f"{repo} - {url} - {archived} - {language} - {fork}")
         else:
             print(dados_api)
+
+
+def save(data, name='data.json'):
+    # Salvando dados em JSON apenas para visualisar a resposta do resquest de forma organizada.
+    with open(name, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
 
 def get_language(requisicao, language):

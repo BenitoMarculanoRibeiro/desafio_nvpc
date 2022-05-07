@@ -2,7 +2,6 @@
 
 ## Desafio nvpc
 
-Oi! Analisei a sua candidatura para a nossa vaga na NVPC.COMPANY .
 Eu quero te desafiar a demonstrar algumas habilidades, desenvolvendo um app simples, que exiba a lista de seus próprios repositórios GITHUB usando a API Graphql pública do GITHUB, ou a API Rest pública do GITHUB.
 
 Essa listagem precisa conter:
@@ -14,10 +13,6 @@ Essa listagem precisa conter:
 
 Você escolhe que tecnologia irá usar e também é você que decide quanto tempo precisará (só me fale quando vai mostrar a url do app).
 
-Você aceita o desafio?
-
-Helena Camargo
-Buscamos pessoas incríveis para criar uma das melhores empresas para o mundo.
 
 ## Requisitos
 
@@ -46,3 +41,75 @@ pip install -r requirements.txt
 ```
 python -m index.py
 ```
+
+## Iniciando projeto no replit
+
+Crie uma conta no replit.
+
+Crie um novo projeto:
+
+![](image/README/1651930787608.png)
+
+Import do GitHub:
+
+![](image/README/1651930846602.png)
+
+Insira a GitHub url e prossiga:
+
+![img](image/README/1651930882322.png)
+
+Aguarde o termino da importação, aparecerá uma tela parecida com essa:
+
+![](image/README/1651930966384.png)
+
+Pressione o botão RUN ou use as teclas Ctrl + Enter:
+
+![](image/README/1651931076151.png)
+
+Aguarde a instalação de todos os pacotes (é automatico), e espere o servidor subir. Aparecerá uma tela semelhante a essa:
+
+![](image/README/1651931284942.png)
+
+Copie o link e pode usar no seu navegador (Chrome, Opera, Firefor, etc):
+
+![](image/README/1651931276164.png)
+
+O resultado será uma tela semelhante e essa:
+
+![](image/README/1651939781421.png)
+
+## Funcionalidades
+
+As funcionalidades são cumulativas, ou seja, serão exibidos apenas os repositorios que atendam as demandadas de todos os campos.
+
+### Find a repository:
+
+Essa função encontra repositorios que contenha o que estiver escrito no campo, converte o texto digitado e os nomes de repositorios para minusculo para fazer a comparação.
+
+### Types:
+
+Esse campo tem três opções, All, Fork e Archived.
+
+Fork mostra os repositorios que são fork de outros repositorios.
+
+Archived mostra os repositorios que foram arquivados.
+
+All mostra todos os repositorios.
+
+### Language:
+
+Pode ser escolhido uma linguagem a ser exibida.
+
+##### Nota: 
+
+A linguaguem do repositorio a ser exibido será a que o github reconhecer, mas o sistema do github não é perfeito, então nem sempre apresenta a linguagem que foi realmente usada.
+
+### Sort:
+
+Neste campo pode ser escolhido a ordenação alfabético por nome de repositorio ou por ulima atualização. o padrão é a ordenação alfabética.
+
+## Considerações finais
+
+A API do github tem limitação de uso, devido a isso decidi criar um arquivo json local para armazenar os dados obtidos em cada requisição, e quando ultrapassar o limite será usado os dados armazenados para manter o projeto funcionando.
+
+O projeto pode e será melhorado com o tempo.
