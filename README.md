@@ -13,10 +13,9 @@ Essa listagem precisa conter:
 
 Você escolhe que tecnologia irá usar e também é você que decide quanto tempo precisará (só me fale quando vai mostrar a url do app).
 
-
 ## Requisitos
 
-Para esse projeto está sendo usado Python versão 3.8.10 no Windows. 
+Para esse projeto está sendo usado Python versão 3.8.10 no Windows.
 
 E para a hospedagem usei a plataforma replit (https://replit.com) por ser mais familiarizado com o funcionamento dela.
 
@@ -78,6 +77,14 @@ O resultado será uma tela semelhante e essa:
 
 ![](image/README/1651939781421.png)
 
+##### Nota:
+
+O replit pode cair depois de um tempo de inatividade, porém se alguém acessar o site o replit sobe o servidor automaticamente.
+
+## Heroku
+
+O site pode ser acessado no heroku também, [https://desafionvpc.herokuapp.com]().
+
 ## Funcionalidades
 
 As funcionalidades são cumulativas, ou seja, serão exibidos apenas os repositorios que atendam as demandadas de todos os campos.
@@ -100,7 +107,7 @@ All mostra todos os repositorios.
 
 Pode ser escolhido uma linguagem a ser exibida.
 
-##### Nota: 
+##### Nota:
 
 A linguaguem do repositorio a ser exibido será a que o github reconhecer, mas o sistema do github não é perfeito, então nem sempre apresenta a linguagem que foi realmente usada.
 
