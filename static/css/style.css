@@ -25,7 +25,7 @@ html {
     text-align: center;
 }
 
-.grid1 div h2 {
+.grid1 div h2 a {
     font-size: 20px;
     color: #58A6FF;
 }
