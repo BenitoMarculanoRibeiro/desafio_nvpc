@@ -107,7 +107,7 @@ def get_type(requisicao, type):
 
 def sort_by(requisicao, sort):
     if sort == 'last_update':
-        requisicao.sort(key=lambda date: date['updated_at'], reverse=True)
+        requisicao.sort(key=lambda date: date['pushed_at'], reverse=True)
         return requisicao
     else:
         requisicao.sort(key=lambda name: str(name['name']).lower())

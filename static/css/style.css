@@ -90,10 +90,3 @@ html {
     color: #8B949E;
     text-decoration: none;
 }
-
-.item-center {
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 30% 30%;
-    column-gap: 10px;
-    row-gap: 15px;
-}
