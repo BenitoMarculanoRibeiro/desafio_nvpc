@@ -83,7 +83,7 @@ O replit pode cair depois de um tempo de inatividade, porém se alguém acessar 
 
 ## Heroku
 
-O site pode ser acessado no heroku também, [https://desafionvpc.herokuapp.com]().
+O site pode ser acessado no heroku também, [https://desafionvpc.herokuapp.com](https://desafionvpc.herokuapp.com).
 
 ## Funcionalidades
 
