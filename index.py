@@ -135,5 +135,5 @@ def index():
         get_type(get_language(data, language), type), name_repositori), sort)
     return render_template('index.html', posts=posts)
 
-
-app.run(host="0.0.0.0")
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True)
